@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/bangalore-metro-timings/' : '/', // Use base path only for production
+  base: command === 'build' ? '/bangalore-metro-tools/' : '/', // Use base path only for production
   root: 'src',
   publicDir: '../public',
   build: {
@@ -46,8 +46,8 @@ export default defineConfig(({ command }) => ({
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait-primary',
-        start_url: command === 'build' ? '/bangalore-metro-timings/' : '/',
-        scope: command === 'build' ? '/bangalore-metro-timings/' : '/',
+        start_url: command === 'build' ? '/bangalore-metro-tools/' : '/',
+        scope: command === 'build' ? '/bangalore-metro-tools/' : '/',
         icons: [
           {
             src: '/icons/icon-192.svg',
@@ -73,14 +73,14 @@ export default defineConfig(({ command }) => ({
             name: 'Next Train',
             short_name: 'Next Train',
             description: 'Find upcoming trains',
-            url: (command === 'build' ? '/bangalore-metro-timings/' : '/') + '#next-train',
+            url: (command === 'build' ? '/bangalore-metro-tools/' : '/') + '#next-train',
             icons: [{ src: '/icons/icon-192.svg', sizes: '192x192' }]
           },
           {
             name: 'Journey Planner',
             short_name: 'Journey',
             description: 'Plan your metro journey',
-            url: (command === 'build' ? '/bangalore-metro-timings/' : '/') + '#journey-planner',
+            url: (command === 'build' ? '/bangalore-metro-tools/' : '/') + '#journey-planner',
             icons: [{ src: '/icons/icon-192.svg', sizes: '192x192' }]
           }
         ],
