@@ -25,9 +25,11 @@ class DataStore {
         }
 
         try {
+            const baseUrl = import.meta.env.BASE_URL;
+            
             const [routesResponse, schedulesResponse] = await Promise.all([
-                fetch('/bangalore-metro-tools/data/metro-routes.json'),
-                fetch('/bangalore-metro-tools/data/metro-schedules.json')
+                fetch('${baseUrl}data/metro-routes.json'),
+                fetch('${baseUrl}data/metro-schedules.json')
             ]);
 
             if (!routesResponse.ok || !schedulesResponse.ok) {
