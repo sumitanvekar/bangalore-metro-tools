@@ -26,8 +26,8 @@ class DataStore {
 
         try {
             const [routesResponse, schedulesResponse] = await Promise.all([
-                fetch('/data/metro-routes.json'),
-                fetch('/data/metro-schedules.json')
+                fetch('/bangalore-metro-tools/data/metro-routes.json'),
+                fetch('/bangalore-metro-tools/data/metro-schedules.json')
             ]);
 
             if (!routesResponse.ok || !schedulesResponse.ok) {
