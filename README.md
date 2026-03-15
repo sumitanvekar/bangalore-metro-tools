@@ -2,6 +2,8 @@
 
 A Progressive Web App for planning metro journeys and viewing schedules for Bangalore Namma Metro. This is a hobby project based on the information provided in https://www.bmrc.co.in/metro-timings/ and https://www.bmrc.co.in/schematic-route-map/. Do not expect support.
 
+Access live site [here](https://sumitanvekar.github.io/bangalore-metro-tools/).
+
 If you are interested to fix the timings, feel free to raise a pull request.
 
 ## Features
@@ -79,6 +81,9 @@ bangalore-metro-timings/
 - Shows first/last trains for key stations
 - Displays frequency patterns throughout the day
 - Fixed departure times for Yellow line
+
+## Hosting
+Hosted using github pages.
 
 ## Data Last Updated
 
