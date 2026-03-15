@@ -1,10 +1,10 @@
 # Bangalore Metro Timings - PWA
 
-A Progressive Web App for planning metro journeys and viewing schedules for Bangalore Namma Metro. This is a hobby project based on the information provided in https://www.bmrc.co.in/metro-timings/ and https://www.bmrc.co.in/schematic-route-map/. Do not expect support.
+A Progressive Web App for planning metro journeys and viewing schedules for Bangalore Namma Metro. This is a hobby project based on the information provided in https://www.bmrc.co.in/metro-timings/ and https://www.bmrc.co.in/schematic-route-map/. I have no affiliation with BMRC.
+
+Do not expect support in case of mistakes. If you are interested to fix the timings, feel free to raise a pull request.
 
 Access live site [here](https://sumitanvekar.github.io/bangalore-metro-tools/).
-
-If you are interested to fix the timings, feel free to raise a pull request.
 
 ## Features
 
