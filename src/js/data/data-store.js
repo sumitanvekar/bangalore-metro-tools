@@ -28,8 +28,8 @@ class DataStore {
             const baseUrl = import.meta.env.BASE_URL;
             
             const [routesResponse, schedulesResponse] = await Promise.all([
-                fetch('${baseUrl}data/metro-routes.json'),
-                fetch('${baseUrl}data/metro-schedules.json')
+                fetch('data/metro-routes.json'),
+                fetch('data/metro-schedules.json')
             ]);
 
             if (!routesResponse.ok || !schedulesResponse.ok) {
