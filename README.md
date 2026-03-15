@@ -1,6 +1,8 @@
 # Bangalore Metro Timings - PWA
 
-A Progressive Web App for planning metro journeys and viewing schedules for Bangalore Namma Metro.
+A Progressive Web App for planning metro journeys and viewing schedules for Bangalore Namma Metro. This is a hobby project based on the information provided in https://www.bmrc.co.in/metro-timings/ and https://www.bmrc.co.in/schematic-route-map/. Do not expect support.
+
+If you are interested to fix the timings, feel free to raise a pull request.
 
 ## Features
 
@@ -15,14 +17,6 @@ A Progressive Web App for planning metro journeys and viewing schedules for Bang
 - **CSS**: Tailwind CSS (via CDN)
 - **PWA**: vite-plugin-pwa with Workbox for offline support
 - **Data**: JSON files with comprehensive route and schedule data
-
-## Metro Lines Covered
-
-- **Purple Line** (43.49 km): Challaghatta ↔ Whitefield/Hopefarm
-- **Green Line** (33.46 km): Silk Institute ↔ Nagawara/Soladevanahalli
-- **Yellow Line** (19.15 km): BTM Layout ↔ Bommasandra
-
-Total: **82 stations** across 3 lines with **3 interchange stations**
 
 ## Development
 
@@ -86,33 +80,9 @@ bangalore-metro-timings/
 - Displays frequency patterns throughout the day
 - Fixed departure times for Yellow line
 
-## Interchange Stations
-
-1. **Majestic** (Nadaprabhu Kempegowda Station) - Purple ↔ Green
-2. **Mantri Square Sampige Road** - Purple ↔ Green
-3. **Banashankari** - Green ↔ Yellow
-
 ## Data Last Updated
 
 2026-03-14
-
-## Browser Support
-
-- Chrome/Edge (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- iOS Safari (latest 2 versions)
-- Android Chrome (latest 2 versions)
-
-## Roadmap
-
-- [x] Phase 1: Foundation and data loading
-- [x] Phase 2: Station dropdown component
-- [x] Phase 3: Journey planner with BFS
-- [x] Phase 4: Next train finder
-- [x] Phase 5: Schedule viewer
-- [ ] Phase 6: PWA setup (service worker, offline support)
-- [ ] Phase 7: Polish and testing
 
 ## Contributing
 
@@ -124,4 +94,4 @@ MIT
 
 ## Disclaimer
 
-All timings are approximate. For exact schedules, please verify at metro stations or the official BMRCL website.
+All timings are approximate. For exact schedules, please verify at metro stations or the official [BMRCL](https://www.bmrc.co.in) website.
