@@ -1,0 +1,1025 @@
+{
+  "schedules": {
+    "purple_line": {
+      "monday": {
+        "direction_west_to_east": {
+          "from_challaghatta": {
+            "first_train": "04:15",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "04:15-04:35",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "04:35-05:15",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "05:15-06:54",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "06:54-12:20",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "12:20-16:45",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:45-23:05",
+                "frequency": "10 mins"
+              }
+            ]
+          },
+          "from_whitefield": {
+            "first_train": "04:15",
+            "last_train": "22:45",
+            "peak_hours": [
+              {
+                "period": "04:15-04:35",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "04:35-05:00",
+                "frequency": "13 mins"
+              },
+              {
+                "period": "05:00-10:57",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:57-15:21",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "15:21-22:01",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:01-22:45",
+                "frequency": "15 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {
+          "kengeri": {
+            "towards_whitefield": {
+              "first": "05:14",
+              "last": "23:14"
+            },
+            "towards_challaghatta": {
+              "first": "05:30",
+              "last": "23:30"
+            }
+          },
+          "mysuru_road": {
+            "towards_whitefield": {
+              "first": "05:30",
+              "last": "23:30"
+            },
+            "towards_challaghatta": {
+              "first": "05:46",
+              "last": "23:46"
+            }
+          },
+          "nadaprabhu_kempegowda_majestic": {
+            "towards_whitefield": {
+              "first": "05:45",
+              "last": "23:45"
+            },
+            "towards_challaghatta": {
+              "first": "05:15",
+              "last": "23:15"
+            }
+          },
+          "baiyappanahalli": {
+            "towards_whitefield": {
+              "first": "06:00",
+              "last": "00:00"
+            },
+            "towards_challaghatta": {
+              "first": "05:00",
+              "last": "23:00"
+            }
+          },
+          "whitefield": {
+            "towards_challaghatta": {
+              "first": "05:00",
+              "last": "23:00"
+            }
+          }
+        }
+      },
+      "tuesday_to_friday": {
+        "direction_west_to_east": {
+          "from_challaghatta": {
+            "first_train": "05:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "05:00-05:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "05:20-06:00",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:00-06:54",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "06:54-12:20",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "12:20-16:02",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:02-23:05",
+                "frequency": "10 mins"
+              }
+            ]
+          },
+          "from_whitefield": {
+            "first_train": "05:00",
+            "last_train": "22:45",
+            "peak_hours": [
+              {
+                "period": "05:00-05:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "05:20-10:57",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:57-15:21",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "15:21-22:01",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:01-22:45",
+                "frequency": "15 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {
+          "kengeri": {
+            "towards_whitefield": {
+              "first": "05:14",
+              "last": "23:14"
+            }
+          },
+          "mysuru_road": {
+            "towards_whitefield": {
+              "first": "05:30",
+              "last": "23:30"
+            }
+          },
+          "nadaprabhu_kempegowda_majestic": {
+            "towards_whitefield": {
+              "first": "05:45",
+              "last": "23:45"
+            },
+            "towards_challaghatta": {
+              "first": "05:15",
+              "last": "23:15"
+            }
+          },
+          "baiyappanahalli": {
+            "towards_whitefield": {
+              "first": "06:00",
+              "last": "00:00"
+            },
+            "towards_challaghatta": {
+              "first": "05:00",
+              "last": "23:00"
+            }
+          }
+        }
+      },
+      "saturday": {
+        "direction_west_to_east": {
+          "from_challaghatta": {
+            "first_train": "05:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "05:00-05:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "05:20-06:00",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:00-06:54",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "06:54-12:20",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "12:20-16:45",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:45-23:05",
+                "frequency": "10 mins"
+              }
+            ]
+          },
+          "from_whitefield": {
+            "first_train": "05:00",
+            "last_train": "22:45",
+            "peak_hours": [
+              {
+                "period": "05:00-05:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "05:20-10:57",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:57-15:21",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "15:21-22:01",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:01-22:45",
+                "frequency": "15 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {
+          "nadaprabhu_kempegowda_majestic": {
+            "towards_whitefield": {
+              "first": "05:45",
+              "last": "23:45"
+            },
+            "towards_challaghatta": {
+              "first": "05:15",
+              "last": "23:15"
+            }
+          },
+          "baiyappanahalli": {
+            "towards_whitefield": {
+              "first": "06:00",
+              "last": "00:00"
+            },
+            "towards_challaghatta": {
+              "first": "05:00",
+              "last": "23:00"
+            }
+          }
+        }
+      },
+      "sunday": {
+        "direction_west_to_east": {
+          "from_challaghatta": {
+            "first_train": "07:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "07:00-07:50",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:50-12:00",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "12:00-21:28",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "21:28-23:05",
+                "frequency": "10 mins"
+              }
+            ]
+          },
+          "from_whitefield": {
+            "first_train": "07:00",
+            "last_train": "22:45",
+            "peak_hours": [
+              {
+                "period": "07:00-10:33",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:33-20:01",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "20:01-22:31",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:31-22:45",
+                "frequency": "14 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {
+          "nadaprabhu_kempegowda_majestic": {
+            "towards_whitefield": {
+              "first": "07:45",
+              "last": "23:30"
+            },
+            "towards_challaghatta": {
+              "first": "07:15",
+              "last": "23:05"
+            }
+          },
+          "baiyappanahalli": {
+            "towards_whitefield": {
+              "first": "08:00",
+              "last": "23:45"
+            },
+            "towards_challaghatta": {
+              "first": "07:00",
+              "last": "23:05"
+            }
+          }
+        }
+      }
+    },
+    "green_line": {
+      "monday": {
+        "direction_south_to_north": {
+          "from_silk_institute": {
+            "first_train": "04:15",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "04:15-05:00",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "05:00-07:00",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:00-11:09",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "11:09-16:48",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:48-20:29",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "20:29-21:30",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "21:30-22:40",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:40-23:05",
+                "frequency": "12.5 mins"
+              }
+            ]
+          },
+          "from_nagawara": {
+            "first_train": "04:15",
+            "last_train": "22:57",
+            "peak_hours": [
+              {
+                "period": "04:15-04:40",
+                "frequency": "25 mins"
+              },
+              {
+                "period": "05:00-06:15",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:15-10:25",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:25-10:39",
+                "frequency": "7 mins"
+              },
+              {
+                "period": "10:39-15:51",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "15:51-19:44",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "19:44-20:24",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "20:24-22:04",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:04-22:40",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:40-22:57",
+                "frequency": "15 mins"
+              }
+            ]
+          },
+          "from_nagasandra": {
+            "first_train": "06:37",
+            "last_train": "19:41",
+            "peak_hours": [
+              {
+                "period": "06:37-10:22",
+                "frequency": "5 mins"
+              },
+              {
+                "period": "16:36-19:41",
+                "frequency": "5 mins"
+              }
+            ]
+          },
+          "from_yelachenahalli": {
+            "first_train": "07:20",
+            "last_train": "20:22",
+            "peak_hours": [
+              {
+                "period": "07:20-10:50",
+                "frequency": "5 mins"
+              },
+              {
+                "period": "16:58-20:22",
+                "frequency": "5 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {}
+      },
+      "tuesday_to_friday": {
+        "direction_south_to_north": {
+          "from_silk_institute": {
+            "first_train": "05:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "05:00-07:00",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:00-11:09",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "11:09-16:48",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:48-20:29",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "20:29-21:30",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "21:30-22:40",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:40-23:05",
+                "frequency": "12.5 mins"
+              }
+            ]
+          },
+          "from_nagawara": {
+            "first_train": "05:00",
+            "last_train": "22:57",
+            "peak_hours": [
+              {
+                "period": "05:00-06:15",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:15-10:25",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "10:25-10:39",
+                "frequency": "7 mins"
+              },
+              {
+                "period": "10:39-15:51",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "15:51-19:44",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "19:44-20:24",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "20:24-22:04",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:04-22:40",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:40-22:57",
+                "frequency": "15 mins"
+              }
+            ]
+          },
+          "from_nagasandra": {
+            "first_train": "06:37",
+            "last_train": "19:41",
+            "peak_hours": [
+              {
+                "period": "06:37-10:22",
+                "frequency": "5 mins"
+              },
+              {
+                "period": "16:36-19:41",
+                "frequency": "5 mins"
+              }
+            ]
+          },
+          "from_yelachenahalli": {
+            "first_train": "07:20",
+            "last_train": "20:22",
+            "peak_hours": [
+              {
+                "period": "07:20-10:50",
+                "frequency": "5 mins"
+              },
+              {
+                "period": "16:58-20:22",
+                "frequency": "5 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {}
+      },
+      "saturday": {
+        "direction_south_to_north": {
+          "from_silk_institute": {
+            "first_train": "05:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "05:00-07:00",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:00-11:53",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "11:53-16:48",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:48-20:57",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "20:57-21:30",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "21:30-22:40",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:40-23:05",
+                "frequency": "12.5 mins"
+              }
+            ]
+          },
+          "from_nagawara": {
+            "first_train": "05:00",
+            "last_train": "23:00",
+            "peak_hours": [
+              {
+                "period": "05:00-06:15",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:15-10:39",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "10:39-16:01",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "16:01-16:23",
+                "frequency": "5.5 mins"
+              },
+              {
+                "period": "16:23-19:52",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "19:52-20:24",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "20:24-22:04",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:04-23:00",
+                "frequency": "15 mins"
+              }
+            ]
+          },
+          "from_nagasandra": {
+            "first_train": "06:38",
+            "last_train": "19:47",
+            "peak_hours": [
+              {
+                "period": "06:38-10:40",
+                "frequency": "5.5 mins"
+              },
+              {
+                "period": "16:13-19:47",
+                "frequency": "5.5 mins"
+              }
+            ]
+          },
+          "from_yelachenahalli": {
+            "first_train": "07:21",
+            "last_train": "20:36",
+            "peak_hours": [
+              {
+                "period": "07:21-11:23",
+                "frequency": "5.5 mins"
+              },
+              {
+                "period": "16:58-20:36",
+                "frequency": "5.5 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {}
+      },
+      "sunday": {
+        "direction_south_to_north": {
+          "from_silk_institute": {
+            "first_train": "07:00",
+            "last_train": "23:05",
+            "peak_hours": [
+              {
+                "period": "07:00-07:58",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:58-12:08",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "12:08-21:44",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "21:44-22:44",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:44-23:05",
+                "frequency": "12 mins"
+              }
+            ]
+          },
+          "from_nagawara": {
+            "first_train": "07:00",
+            "last_train": "23:00",
+            "peak_hours": [
+              {
+                "period": "07:00-10:47",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "10:47-20:15",
+                "frequency": "8 mins"
+              },
+              {
+                "period": "20:15-22:05",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:05-22:29",
+                "frequency": "12 mins"
+              },
+              {
+                "period": "22:29-23:00",
+                "frequency": "15 mins"
+              }
+            ]
+          }
+        },
+        "key_stations": {}
+      }
+    },
+    "yellow_line": {
+      "monday": {
+        "direction_kr_road_to_bommasandra": {
+          "from_kr_road": {
+            "first_train": "05:05",
+            "last_train": "23:55",
+            "peak_hours": [
+              {
+                "period": "05:05-05:35",
+                "frequency": "30 mins"
+              },
+              {
+                "period": "05:35-06:00",
+                "frequency": "25 mins"
+              },
+              {
+                "period": "06:00-06:40",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "06:40-06:56",
+                "frequency": "16 mins"
+              },
+              {
+                "period": "06:56-07:07",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "07:07-07:37",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "07:37-10:55",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "10:55-11:06",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "11:06-16:42",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "16:42-22:06",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "22:06-22:30",
+                "frequency": "12 mins"
+              },
+              {
+                "period": "22:30-23:15",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "23:15-23:55",
+                "frequency": "20 mins"
+              }
+            ]
+          },
+          "from_bommasandra": {
+            "first_train": "05:05",
+            "last_train": "22:42",
+            "peak_hours": [
+              {
+                "period": "05:05-05:35",
+                "frequency": "30 mins"
+              },
+              {
+                "period": "05:35-06:00",
+                "frequency": "25 mins"
+              },
+              {
+                "period": "06:00-06:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "06:20-07:00",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "07:00-10:18",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "10:18-10:30",
+                "frequency": "12 mins"
+              },
+              {
+                "period": "10:30-16:06",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "16:06-22:42",
+                "frequency": "09 mins"
+              }
+            ]
+          }
+        }
+      },
+      "tuesday_to_saturday": {
+        "direction_kr_road_to_bommasandra": {
+          "from_kr_road": {
+            "first_train": "06:00",
+            "last_train": "23:55",
+            "peak_hours": [
+              {
+                "period": "06:00-06:25",
+                "frequency": "25 mins"
+              },
+              {
+                "period": "06:25-07:10",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "07:10-07:36",
+                "frequency": "13 mins"
+              },
+              {
+                "period": "07:36-07:58",
+                "frequency": "11 mins"
+              },
+              {
+                "period": "07:58-08:08",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "08:08-10:59",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "10:59-11:11",
+                "frequency": "12 mins"
+              },
+              {
+                "period": "11:11-16:47",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "16:47-22:11",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "22:11-22:25",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "22:25-22:55",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "22:55-23:55",
+                "frequency": "20 mins"
+              }
+            ]
+          },
+          "from_bommasandra": {
+            "first_train": "06:00",
+            "last_train": "22:42",
+            "peak_hours": [
+              {
+                "period": "06:00-06:20",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "06:20-06:35",
+                "frequency": "15 mins"
+              },
+              {
+                "period": "06:35-07:23",
+                "frequency": "12 mins"
+              },
+              {
+                "period": "07:23-07:32",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "07:32-10:49",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "10:49-11:03",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "11:03-16:11",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "16:11-22:20",
+                "frequency": "09 mins"
+              },
+              {
+                "period": "22:20-22:30",
+                "frequency": "10 mins"
+              },
+              {
+                "period": "22:30-22:42",
+                "frequency": "12 mins"
+              }
+            ]
+          }
+        }
+      },
+      "sunday": {
+        "direction_kr_road_to_bommasandra": {
+          "from_kr_road": {
+            "first_train": "07:00",
+            "last_train": "23:55",
+            "peak_hours": [
+              {
+                "period": "07:00-11:48",
+                "frequency": "18 mins"
+              },
+              {
+                "period": "11:48-21:08",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "21:08-21:26",
+                "frequency": "18 mins"
+              },
+              {
+                "period": "21:26-21:45",
+                "frequency": "19 mins"
+              },
+              {
+                "period": "21:45-22:45",
+                "frequency": "20 mins"
+              },
+              {
+                "period": "22:45-23:35",
+                "frequency": "25 mins"
+              },
+              {
+                "period": "23:35-23:55",
+                "frequency": "20 mins"
+              }
+            ]
+          },
+          "from_bommasandra": {
+            "first_train": "07:00",
+            "last_train": "22:42",
+            "peak_hours": [
+              {
+                "period": "07:00-11:12",
+                "frequency": "18 mins"
+              },
+              {
+                "period": "11:12-22:24",
+                "frequency": "14 mins"
+              },
+              {
+                "period": "22:24-22:42",
+                "frequency": "18 mins"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "notes": {
+    "general": "Additional trains from intermediate stations are operated to cater to peak hour demand.",
+    "timings_disclaimer": "All timings are approximate. For exact schedules, please check at stations.",
+    "frequency_explanation": {
+      "peak_hours": "Trains run more frequently during morning (06:00-09:00) and evening (17:00-21:00) peak hours",
+      "off_peak": "Lower frequency during off-peak hours",
+      "sunday": "Reduced service on Sundays with later start times"
+    }
+  }
+}

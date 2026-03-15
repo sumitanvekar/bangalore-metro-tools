@@ -1,0 +1,504 @@
+{
+  "metroSystem": {
+    "name": "Namma Metro Bangalore",
+    "version": "3",
+    "lastUpdated": "2026-03-14"
+  },
+  "routes": [
+    {
+      "id": "purple",
+      "name": "Purple Line",
+      "color": "#9B59B6",
+      "length": "43.49 km",
+      "direction": "East-West",
+      "terminals": {
+        "west": "Challaghatta",
+        "east": "Whitefield (Kadugodi) / Hopefarm Channasandra"
+      },
+      "stations": [
+        {
+          "id": "PL01",
+          "name": "Challaghatta",
+          "type": "terminal"
+        },
+        {
+          "id": "PL02",
+          "name": "Kengeri",
+          "type": "regular"
+        },
+        {
+          "id": "PL03",
+          "name": "Kengeri Bus Terminal",
+          "type": "regular"
+        },
+        {
+          "id": "PL04",
+          "name": "Pattanagere",
+          "type": "regular"
+        },
+        {
+          "id": "PL05",
+          "name": "Jnanabharathi",
+          "type": "regular"
+        },
+        {
+          "id": "PL06",
+          "name": "Rajarajeshwari Nagar",
+          "type": "regular"
+        },
+        {
+          "id": "PL07",
+          "name": "Pantharapalya - Nayandahalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL08",
+          "name": "Mysuru Road",
+          "type": "regular"
+        },
+        {
+          "id": "PL09",
+          "name": "Deepanjali Nagar",
+          "type": "regular"
+        },
+        {
+          "id": "PL10",
+          "name": "Attiguppe",
+          "type": "regular"
+        },
+        {
+          "id": "PL11",
+          "name": "Vijayanagar",
+          "type": "regular"
+        },
+        {
+          "id": "PL12",
+          "name": "Balagangadaranatha Swamiji Station, Hosahalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL13",
+          "name": "Magadi Road",
+          "type": "regular"
+        },
+        {
+          "id": "PL14",
+          "name": "Nadaprabhu Kempegowda Station, Majestic",
+          "type": "interchange",
+          "interchangeWith": ["green"]
+        },
+        {
+          "id": "PL15",
+          "name": "Cubbon Park",
+          "type": "regular"
+        },
+        {
+          "id": "PL16",
+          "name": "Trinity",
+          "type": "regular"
+        },
+        {
+          "id": "PL17",
+          "name": "Halasuru",
+          "type": "regular"
+        },
+        {
+          "id": "PL18",
+          "name": "Indiranagar",
+          "type": "regular"
+        },
+        {
+          "id": "PL19",
+          "name": "Swami Vivekananda Road",
+          "type": "regular"
+        },
+        {
+          "id": "PL20",
+          "name": "Baiyappanahalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL21",
+          "name": "Benniganahalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL22",
+          "name": "K.R. Pura",
+          "type": "regular"
+        },
+        {
+          "id": "PL23",
+          "name": "Sarayyapalya",
+          "type": "regular"
+        },
+        {
+          "id": "PL24",
+          "name": "Garudacharpalya",
+          "type": "regular"
+        },
+        {
+          "id": "PL25",
+          "name": "Hoodi",
+          "type": "regular"
+        },
+        {
+          "id": "PL26",
+          "name": "Seetharampalya",
+          "type": "regular"
+        },
+        {
+          "id": "PL27",
+          "name": "Kundanahalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL28",
+          "name": "Nallurhalli",
+          "type": "regular"
+        },
+        {
+          "id": "PL29",
+          "name": "Singayya Sahitya Hospital",
+          "type": "regular"
+        },
+        {
+          "id": "PL30",
+          "name": "Pattandur Agrahara",
+          "type": "regular"
+        },
+        {
+          "id": "PL31",
+          "name": "Kadugodi Twp Park",
+          "type": "regular"
+        },
+        {
+          "id": "PL32",
+          "name": "Whitefield (Kadugodi)",
+          "type": "terminal"
+        },
+        {
+          "id": "PL33",
+          "name": "Hopefarm Channasandra",
+          "type": "terminal"
+        }
+      ]
+    },
+    {
+      "id": "green",
+      "name": "Green Line",
+      "color": "#27AE60",
+      "length": "33.46 km",
+      "direction": "North-South",
+      "terminals": {
+        "south": "Silk Institute",
+        "north": "Nagawara / Soladevanahalli"
+      },
+      "stations": [
+        {
+          "id": "GL01",
+          "name": "Silk Institute",
+          "type": "terminal"
+        },
+        {
+          "id": "GL02",
+          "name": "Thalaghattapura",
+          "type": "regular"
+        },
+        {
+          "id": "GL03",
+          "name": "Vajarahalli",
+          "type": "regular"
+        },
+        {
+          "id": "GL04",
+          "name": "Doddakallasandra",
+          "type": "regular"
+        },
+        {
+          "id": "GL05",
+          "name": "Konanakunte Cross",
+          "type": "regular"
+        },
+        {
+          "id": "GL06",
+          "name": "Yelachenahalli",
+          "type": "regular"
+        },
+        {
+          "id": "GL07",
+          "name": "Jaya Prakash Nagar",
+          "type": "regular"
+        },
+        {
+          "id": "GL08",
+          "name": "Banashankari",
+          "type": "interchange",
+          "interchangeWith": ["yellow"]
+        },
+        {
+          "id": "GL09",
+          "name": "Vidyalaya Road",
+          "type": "regular"
+        },
+        {
+          "id": "GL10",
+          "name": "Rashtriya Vidyalaya Road",
+          "type": "regular"
+        },
+        {
+          "id": "GL11",
+          "name": "Jayanagar",
+          "type": "regular"
+        },
+        {
+          "id": "GL12",
+          "name": "South End Circle",
+          "type": "regular"
+        },
+        {
+          "id": "GL13",
+          "name": "Lalbagh",
+          "type": "regular"
+        },
+        {
+          "id": "GL14",
+          "name": "National College",
+          "type": "regular"
+        },
+        {
+          "id": "GL15",
+          "name": "Krishna Rajendra Market",
+          "type": "regular"
+        },
+        {
+          "id": "GL16",
+          "name": "Chickpete",
+          "type": "regular"
+        },
+        {
+          "id": "GL17",
+          "name": "Nadaprabhu Kempegowda Station, Majestic",
+          "type": "interchange",
+          "interchangeWith": ["purple"]
+        },
+        {
+          "id": "GL18",
+          "name": "Mantri Square Sampige Road",
+          "type": "interchange",
+          "interchangeWith": ["purple"]
+        },
+        {
+          "id": "GL19",
+          "name": "Mahalakshmi",
+          "type": "regular"
+        },
+        {
+          "id": "GL20",
+          "name": "Rajajinagar",
+          "type": "regular"
+        },
+        {
+          "id": "GL21",
+          "name": "Sandal Soap Factory",
+          "type": "regular"
+        },
+        {
+          "id": "GL22",
+          "name": "Mahakavi Kuvempu Road",
+          "type": "regular"
+        },
+        {
+          "id": "GL23",
+          "name": "Srirampura",
+          "type": "regular"
+        },
+        {
+          "id": "GL24",
+          "name": "Yeshwantpur",
+          "type": "regular"
+        },
+        {
+          "id": "GL25",
+          "name": "Peenya Industry",
+          "type": "regular"
+        },
+        {
+          "id": "GL26",
+          "name": "Jalahalli",
+          "type": "regular"
+        },
+        {
+          "id": "GL27",
+          "name": "Dasarahalli",
+          "type": "regular"
+        },
+        {
+          "id": "GL28",
+          "name": "Nagawara",
+          "type": "terminal"
+        }
+      ],
+      "branches": [
+        {
+          "name": "Green Line Northern Extension",
+          "from": "Nagawara",
+          "stations": [
+            {
+              "id": "GL29",
+              "name": "Hebbal",
+              "type": "regular"
+            },
+            {
+              "id": "GL30",
+              "name": "Lottegollahalli",
+              "type": "regular"
+            },
+            {
+              "id": "GL31",
+              "name": "Thanisandra",
+              "type": "regular"
+            },
+            {
+              "id": "GL32",
+              "name": "Yelahanka",
+              "type": "regular"
+            },
+            {
+              "id": "GL33",
+              "name": "Jakkur",
+              "type": "regular"
+            },
+            {
+              "id": "GL34",
+              "name": "Chikkabanavara",
+              "type": "regular"
+            },
+            {
+              "id": "GL35",
+              "name": "Soladevanahalli",
+              "type": "terminal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yellow",
+      "name": "Yellow Line",
+      "color": "#F1C40F",
+      "length": "19.15 km",
+      "direction": "Southeast",
+      "terminals": {
+        "northwest": "BTM Layout",
+        "southeast": "Delta electronics Bommasandra"
+      },
+      "stations": [
+        {
+          "id": "YL01",
+          "name": "BTM Layout",
+          "type": "terminal"
+        },
+        {
+          "id": "YL02",
+          "name": "Ragigudda",
+          "type": "regular"
+        },
+        {
+          "id": "YL03",
+          "name": "Central Silk Board",
+          "type": "regular",
+          "nearbyLandmarks": ["Jayadeva Hospital"]
+        },
+        {
+          "id": "YL04",
+          "name": "Bommanahalli",
+          "type": "regular"
+        },
+        {
+          "id": "YL05",
+          "name": "Hongasandra",
+          "type": "regular"
+        },
+        {
+          "id": "YL06",
+          "name": "Kudlu Gate",
+          "type": "regular"
+        },
+        {
+          "id": "YL07",
+          "name": "Singasandra",
+          "type": "regular"
+        },
+        {
+          "id": "YL08",
+          "name": "Hosa Road",
+          "type": "regular"
+        },
+        {
+          "id": "YL09",
+          "name": "Beratena Agrahara",
+          "type": "regular"
+        },
+        {
+          "id": "YL10",
+          "name": "Electronic City",
+          "type": "regular"
+        },
+        {
+          "id": "YL11",
+          "name": "Infosys Foundation Konappana Agrahara",
+          "type": "regular"
+        },
+        {
+          "id": "YL12",
+          "name": "Huskur Road",
+          "type": "regular"
+        },
+        {
+          "id": "YL13",
+          "name": "Biocon Hebbagodi",
+          "type": "regular"
+        },
+        {
+          "id": "YL14",
+          "name": "Delta electronics Bommasandra",
+          "type": "terminal"
+        }
+      ]
+    }
+  ],
+  "interchangeStations": [
+    {
+      "name": "Nadaprabhu Kempegowda Station, Majestic",
+      "lines": ["purple", "green"],
+      "type": "major",
+      "facilities": ["bus_terminal", "railway_station"]
+    },
+    {
+      "name": "Mantri Square Sampige Road",
+      "lines": ["purple", "green"],
+      "type": "interchange"
+    },
+    {
+      "name": "Banashankari",
+      "lines": ["green", "yellow"],
+      "type": "interchange"
+    }
+  ],
+  "legend": {
+    "stationTypes": {
+      "terminal": "Metro Terminal Stations",
+      "regular": "Metro Stations",
+      "interchange": "Metro Interchange Stations"
+    },
+    "nearbyFacilities": {
+      "indianRailway": "Indian Railway Stations",
+      "indianRailwayLines": "Indian Railway Lines",
+      "bmtcBusStands": "Main BMTC Bus Stands",
+      "ksrtcBusStands": "Main KSRTC Bus Stands",
+      "mainRailwayStations": "Main Indian Railway Stations",
+      "internationalAirport": "International Airport"
+    }
+  }
+}
