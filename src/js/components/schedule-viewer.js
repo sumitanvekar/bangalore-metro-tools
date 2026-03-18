@@ -150,6 +150,22 @@ export class ScheduleViewer extends HTMLElement {
             `;
         }
 
+        // Short loops
+        const shortLoops = scheduleService.getShortLoops(this.selectedLine, dayType);
+        if (shortLoops && shortLoops.length > 0) {
+            html += `
+                <div class="mt-6 pt-6 border-t">
+                    <h4 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <span>Short Loops</span>
+                        <span class="text-xs font-normal text-gray-600">(Trains between intermediate stations)</span>
+                    </h4>
+                    <div class="space-y-4">
+                        ${shortLoops.map(loop => this.renderShortLoop(loop)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         return html;
     }
 
@@ -202,6 +218,45 @@ export class ScheduleViewer extends HTMLElement {
                 </div>
             </div>
         `;
+    }
+
+    renderShortLoop(loop) {
+        return `
+            <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-lg">
+                <div class="flex items-start justify-between gap-4 mb-3">
+                    <div class="flex-1">
+                        <div class="font-semibold text-gray-800 mb-1">
+                            ${this.formatStationName(loop.from)} → ${this.formatStationName(loop.to)}
+                        </div>
+                        <div class="text-xs text-orange-700">
+                            ${loop.times.length} train${loop.times.length > 1 ? 's' : ''} • Short loop service
+                        </div>
+                    </div>
+                    <span class="short-loop-badge">Short Loop</span>
+                </div>
+                <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+                    ${loop.times.map(time => `
+                        <div class="p-2 bg-white rounded text-center font-mono text-sm font-semibold text-orange-800 border border-orange-200">
+                            ${time}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    formatStationName(stationKey) {
+        const nameMap = {
+            'nadaprabhu_kempegowda_majestic': 'Majestic',
+            'mahatma_gandhi_road': 'MG Road',
+            'pattandur_agrahara': 'Pattandur Agrahara',
+            'baiyappanahalli': 'Baiyappanahalli',
+            'mysuru_road': 'Mysuru Road',
+            'whitefield': 'Whitefield',
+            'challaghatta': 'Challaghatta',
+            'kengeri': 'Kengeri'
+        };
+        return nameMap[stationKey] || stationKey.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     }
 
     formatDayType(dayType) {
