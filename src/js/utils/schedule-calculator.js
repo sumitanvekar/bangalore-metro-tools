@@ -7,7 +7,7 @@ import { parseTime, formatTime, getCurrentTimeMinutes, timeDifference } from './
  * Calculate next train times based on frequency
  * Handles midnight crossover for late-night services
  */
-export function calculateNextTrains(firstTrain, lastTrain, peakHours, currentTime, count = 5) {
+export function calculateNextTrains(firstTrain, lastTrain, peakHours, currentTime, count = 5, destination = null) {
     const trains = [];
     const currentMinutes = typeof currentTime === 'number' ? currentTime : getCurrentTimeMinutes();
 
@@ -52,7 +52,9 @@ export function calculateNextTrains(firstTrain, lastTrain, peakHours, currentTim
         while (trains.length < count && nextTrainMinutes <= lastTrainMinutes) {
             trains.push({
                 time: formatTime(nextTrainMinutes),
-                minutesUntil: timeDifference(currentMinutes, nextTrainMinutes)
+                minutesUntil: timeDifference(currentMinutes, nextTrainMinutes),
+                destination: destination,
+                isShortLoop: false
             });
 
             const freq = getFrequencyAtTime(nextTrainMinutes);
@@ -70,7 +72,9 @@ export function calculateNextTrains(firstTrain, lastTrain, peakHours, currentTim
             if (nextTrainMinutes >= currentMinutes) {
                 trains.push({
                     time: formatTime(nextTrainMinutes),
-                    minutesUntil: timeDifference(currentMinutes, nextTrainMinutes)
+                    minutesUntil: timeDifference(currentMinutes, nextTrainMinutes),
+                    destination: destination,
+                    isShortLoop: false
                 });
 
                 if (trains.length >= count) {
