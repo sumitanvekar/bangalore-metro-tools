@@ -191,12 +191,21 @@ export class NextTrain extends HTMLElement {
 
     renderTrain(train, isNext) {
         const urgency = getUrgencyLevel(train.minutesUntil);
+        const destination = train.destination || 'Terminal';
+        const shortLoopClass = train.isShortLoop ? 'short-loop' : '';
 
         return `
-            <div class="train-item ${isNext ? 'next-train' : ''}">
-                <div>
+            <div class="train-item ${isNext ? 'next-train' : ''} ${shortLoopClass}">
+                <div class="train-info-left">
                     <div class="train-time ${isNext ? 'text-accent' : ''}">${train.time}</div>
                     ${isNext ? '<div class="next-train-label">NEXT TRAIN</div>' : ''}
+                    <div class="train-destination">
+                        ${train.isShortLoop ?
+                            `<span class="short-loop-badge">Short Loop</span>` :
+                            ''
+                        }
+                        <span class="destination-text">→ ${destination}</span>
+                    </div>
                 </div>
                 <div class="train-countdown ${urgency}">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

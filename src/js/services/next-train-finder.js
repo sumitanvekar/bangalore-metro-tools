@@ -39,13 +39,15 @@ export class NextTrainFinder {
      */
     getFrequencyBasedTrains(station, direction, daySchedule, currentTime, count) {
         const time = currentTime || getCurrentTimeMinutes();
+        const route = dataStore.getRoute(station.lineId);
 
         // Determine direction key based on line
-        let directionKey, firstTrain, lastTrain, peakHours;
+        let directionKey, firstTrain, lastTrain, peakHours, terminalStation;
 
         if (station.lineId === 'purple') {
             if (direction === 'east') {
                 // Towards Whitefield
+                terminalStation = route?.terminals?.east || 'Whitefield';
                 const stationKey = this.getPurpleStationKey(station.name);
                 if (daySchedule.key_stations?.[stationKey]) {
                     firstTrain = daySchedule.key_stations[stationKey].towards_whitefield?.first;
@@ -58,6 +60,7 @@ export class NextTrainFinder {
                 peakHours = daySchedule.direction_west_to_east.from_challaghatta.peak_hours;
             } else {
                 // Towards Challaghatta
+                terminalStation = route?.terminals?.west || 'Challaghatta';
                 const stationKey = this.getPurpleStationKey(station.name);
                 if (daySchedule.key_stations?.[stationKey]) {
                     firstTrain = daySchedule.key_stations[stationKey].towards_challaghatta?.first;
@@ -72,6 +75,7 @@ export class NextTrainFinder {
         } else if (station.lineId === 'green') {
             if (direction === 'north') {
                 // Towards Nagawara/Soladevanahalli
+                terminalStation = route?.terminals?.north || 'Nagawara';
                 const stationKey = this.getGreenStationKey(station.name);
                 if (daySchedule.key_stations?.[stationKey]) {
                     firstTrain = daySchedule.key_stations[stationKey].towards_nagawara?.first;
@@ -84,6 +88,7 @@ export class NextTrainFinder {
                 peakHours = daySchedule.direction_south_to_north.from_silk_institute.peak_hours;
             } else {
                 // Towards Silk Institute
+                terminalStation = route?.terminals?.south || 'Silk Institute';
                 const stationKey = this.getGreenStationKey(station.name);
                 if (daySchedule.key_stations?.[stationKey]) {
                     firstTrain = daySchedule.key_stations[stationKey].towards_silk_institute?.first;
@@ -98,11 +103,13 @@ export class NextTrainFinder {
         } else if (station.lineId === 'yellow') {
             if (direction === 'southeast') {
                 // Towards Bommasandra
+                terminalStation = route?.terminals?.southeast || 'Bommasandra';
                 firstTrain = daySchedule.direction_kr_road_to_bommasandra.from_kr_road.first_train;
                 lastTrain = daySchedule.direction_kr_road_to_bommasandra.from_kr_road.last_train;
                 peakHours = daySchedule.direction_kr_road_to_bommasandra.from_kr_road.peak_hours;
             } else {
                 // Towards RV Road/BTM Layout
+                terminalStation = route?.terminals?.northwest || 'BTM Layout';
                 firstTrain = daySchedule.direction_kr_road_to_bommasandra.from_bommasandra.first_train;
                 lastTrain = daySchedule.direction_kr_road_to_bommasandra.from_bommasandra.last_train;
                 peakHours = daySchedule.direction_kr_road_to_bommasandra.from_bommasandra.peak_hours;
@@ -113,15 +120,129 @@ export class NextTrainFinder {
             return { error: 'Schedule data incomplete' };
         }
 
-        const trains = calculateNextTrains(firstTrain, lastTrain, peakHours, time, count);
+        const trains = calculateNextTrains(firstTrain, lastTrain, peakHours, time, count, terminalStation);
+
+        // Get short loop trains if available
+        const shortLoopTrains = this.getShortLoopTrains(station, direction, daySchedule, time);
+
+        // Merge and sort all trains by time
+        const allTrains = [...trains, ...shortLoopTrains].sort((a, b) => a.minutesUntil - b.minutesUntil).slice(0, count);
 
         return {
             station: station.name,
             line: station.lineName,
             direction,
-            trains,
+            trains: allTrains,
             scheduleType: 'frequency-based'
         };
+    }
+
+    /**
+     * Get short loop trains for a station
+     */
+    getShortLoopTrains(station, direction, daySchedule, currentTime) {
+        if (!daySchedule.short_loops || !Array.isArray(daySchedule.short_loops)) {
+            return [];
+        }
+
+        const stationKey = this.getPurpleStationKey(station.name);
+        const shortLoopTrains = [];
+
+        // Find relevant short loops based on station and direction
+        daySchedule.short_loops.forEach(loop => {
+            const fromKey = loop.from;
+            const toKey = loop.to;
+
+            // Check if this short loop is relevant for the current station and direction
+            const isRelevant = this.isShortLoopRelevant(stationKey, fromKey, toKey, direction, station.lineId);
+
+            if (isRelevant) {
+                loop.times.forEach(timeStr => {
+                    const trainMinutes = this.parseTime(timeStr);
+                    if (trainMinutes >= currentTime) {
+                        const destination = this.formatStationName(toKey);
+                        shortLoopTrains.push({
+                            time: timeStr,
+                            minutesUntil: this.timeDifference(currentTime, trainMinutes),
+                            destination: destination,
+                            isShortLoop: true
+                        });
+                    }
+                });
+            }
+        });
+
+        return shortLoopTrains;
+    }
+
+    /**
+     * Check if a short loop is relevant for the given station and direction
+     */
+    isShortLoopRelevant(stationKey, fromKey, toKey, direction, lineId) {
+        // For now, implement basic logic for Purple line
+        // This needs to check if the station is between from and to in the correct direction
+
+        if (lineId === 'purple') {
+            // Define station order on Purple line (west to east)
+            const stationOrder = [
+                'challaghatta', 'kengeri', 'mysuru_road', 'nadaprabhu_kempegowda_majestic',
+                'mahatma_gandhi_road', 'pattandur_agrahara', 'baiyappanahalli', 'whitefield'
+            ];
+
+            const stationIdx = stationOrder.indexOf(stationKey);
+            const fromIdx = stationOrder.indexOf(fromKey);
+            const toIdx = stationOrder.indexOf(toKey);
+
+            if (stationIdx === -1 || fromIdx === -1 || toIdx === -1) {
+                return false;
+            }
+
+            // Check if station is on the route and train is going in the right direction
+            if (direction === 'east') {
+                // Train going east: station should be between from and to (or at from)
+                return stationIdx >= fromIdx && stationIdx < toIdx;
+            } else {
+                // Train going west: not applicable for most short loops
+                return false;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Parse time string to minutes
+     */
+    parseTime(timeStr) {
+        const [hours, minutes] = timeStr.split(':').map(Number);
+        return hours * 60 + minutes;
+    }
+
+    /**
+     * Calculate time difference
+     */
+    timeDifference(currentMinutes, trainMinutes) {
+        let diff = trainMinutes - currentMinutes;
+        if (diff < 0) {
+            diff += 1440; // Add 24 hours
+        }
+        return diff;
+    }
+
+    /**
+     * Format station name from key
+     */
+    formatStationName(key) {
+        const nameMap = {
+            'nadaprabhu_kempegowda_majestic': 'Majestic',
+            'mahatma_gandhi_road': 'MG Road',
+            'pattandur_agrahara': 'Pattandur Agrahara',
+            'baiyappanahalli': 'Baiyappanahalli',
+            'mysuru_road': 'Mysuru Road',
+            'whitefield': 'Whitefield',
+            'challaghatta': 'Challaghatta'
+        };
+        return nameMap[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     }
 
     /**
