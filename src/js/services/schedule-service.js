@@ -202,6 +202,20 @@ export class ScheduleService {
             color: route.color
         }));
     }
+
+    /**
+     * Get short loops for a line and day type
+     */
+    getShortLoops(lineId, dayType = null) {
+        const day = dayType || (lineId === 'yellow' ? getScheduleDayKey() : getDayType());
+        const lineSchedule = dataStore.getLineSchedule(lineId);
+
+        if (!lineSchedule || !lineSchedule[day]) {
+            return [];
+        }
+
+        return lineSchedule[day].short_loops || [];
+    }
 }
 
 export const scheduleService = new ScheduleService();
